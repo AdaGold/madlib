@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import MadLibs from './madlibs/MadLibs.js';
 import Story from './components/Story.js';
+import PuzzleForm from './components/PuzzleForm';
 
 class App extends Component {
   constructor() {
