@@ -37,7 +37,7 @@ The form component needs to be generic enough to support all of the different Ma
 
 For this reason we suggest that you try first implementing the form with a single word from the first MadLib. Once that is working and the Story component's text is properly filled out with that single word, move on to supporting all of the words needed for the MadLib.
 
-### Wave 2
+### Wave 2 (Optional)
 Instead of selecting a random MadLib puzzle for the user, allow the user to choose from a dropdown which puzzle they want to play.
 - Create a dropdown menu that allows a user to switch the selected MadLib to play (this should be a new component)
 - Gather the titles from the MadLibs object, and display those as the dropdown options
