@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import MadLibs from './madlibs/MadLibs.js';
 import Story from './components/Story.js';
+import PuzzleForm from './components/PuzzleForm';
+
+function getRandomInt(max) {
+return Math.floor(Math.random() * Math.floor(max));
+  }
 
 class App extends Component {
+
   constructor() {
     super();
 
     this.state = {
-      selectedMadLib: MadLibs[0]
+      selectedMadLib: MadLibs[getRandomInt(4)]
     };
   }
 
@@ -28,16 +34,20 @@ class App extends Component {
       <section className="App">
         <h1>Welcome to MadLibs!</h1>
         <p>Fill in all of the choices to see your final story.</p>
-        {/*
-          Render your form with input values
-        */}
+
         <Story
           title={ this.state.selectedMadLib.title }
           text={ this.state.selectedMadLib.getText() }
           />
+        <PuzzleForm
+          puzzleWords={ this.state.selectedMadLib.words }
+        />
       </section>
     );
   }
 }
+
+
+
 
 export default App;
